@@ -1,0 +1,33 @@
+{
+	"name": "node-api-01",
+	"type": "module",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "tsx watch src/server.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.23.0",
+		"@rocketseat/eslint-config": "^2.2.2",
+		"@types/node": "^22.13.11",
+		"@typescript-eslint/eslint-plugin": "^8.27.0",
+		"@typescript-eslint/parser": "^8.27.0",
+		"eslint": "^9.23.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-define-config": "^2.1.0",
+		"prettier": "^3.5.3",
+		"tsx": "^4.19.3",
+		"typescript": "^5.8.2"
+	},
+	"dependencies": {
+		"fastify": "^5.2.1",
+		"knex": "^3.1.0",
+		"sqlite3": "^5.1.7"
+	}
+}
