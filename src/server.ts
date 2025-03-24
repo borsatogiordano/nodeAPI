@@ -1,17 +1,19 @@
 import fastify from "fastify";
 import { db } from "./database";
+import crypto from "node:crypto";
+import { env } from "./env";
+import { transactionsRoutes } from "./routes/transactions";
 
 const app = fastify();
 
-app.get("/hello", async () => {
-  const tables = await db("sqlite_schema").select('*')
-  return tables
+app.register(transactionsRoutes, {
+	prefix: "transactions",
 });
 
 app
-  .listen({
-    port: 8080,
-  })
-  .then(() => {
-    console.log("HTTP Server Running");
-  });
+	.listen({
+		port: env.PORT,
+	})
+	.then(() => {
+		console.log("HTTP Server Running");
+	});
